@@ -49,7 +49,7 @@
       const owned = document.getElementById("owned").value;
       const result = (to - from) * cost - owned;
       document.getElementById("result").textContent = result;
-      document.getElementById("dungs").textContent = Math.round(result / VALOR_PER_DUNGEON);
+      document.getElementById("dungs").textContent = Math.ceil(result / VALOR_PER_DUNGEON);
     }
 
   </script>
