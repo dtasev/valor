@@ -23,6 +23,7 @@
 
 <body style="background-color: gainsboro;">
   <script>
+    const VALOR_PER_DUNGEON = 135;
     function highlight_valor(elem) {
       highlight(elem, "highlighted-valor-cost")
     }
@@ -46,7 +47,9 @@
       const to = document.getElementsByClassName("highlighted-ilvl-to")[0].dataset["level"];
       const cost = document.getElementsByClassName("highlighted-valor-cost")[0].children[0].textContent;
       const owned = document.getElementById("owned").value;
-      document.getElementById("result").textContent = (to - from) * cost - owned;
+      const result = (to - from) * cost - owned;
+      document.getElementById("result").textContent = result;
+      document.getElementById("dungs").textContent = Math.round(result / VALOR_PER_DUNGEON);
     }
 
   </script>
@@ -171,6 +174,9 @@
       </div>
       <div class="flex-row pt-1">
         <div class="d-flex justify-content-center" id="result"></div>
+      </div>
+      <div class="flex-row pt-4">
+        <div class="d-flex justify-content-center">Approx&nbsp<span id="dungs"></span>&nbspdungeons.</div>
       </div>
     </div>
   </div>
