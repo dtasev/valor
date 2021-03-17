@@ -51,126 +51,130 @@
 
   </script>
   <div class="container">
-    <div class="flex-row pb-5">
-      <div class="d-flex justify-content-center">You want to upgrade</div>
-    </div>
-    <div class="flex-row cost-row highlighted-valor-cost" onclick="highlight_valor(this)">
-      <div class="d-flex justify-content-center">
-        250
+    <div class="offset-md-3 col-md-6">
+      <div class="flex-row pb-5">
+        <div class="d-flex justify-content-center">You want to upgrade</div>
       </div>
-      <div class="d-flex justify-content-center">
-        <div class="p-2">Off-Hands</div>
-        <div class="p-2">Rings</div>
-        <div class="p-2">Cloaks</div>
-        <div class="p-2">Bracers</div>
-        <div class="p-2">Necks</div>
+      <div class="flex-row cost-row highlighted-valor-cost" onclick="highlight_valor(this)">
+        <div class="d-flex justify-content-center">
+          250
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="p-2">Off-Hands</div>
+          <div class="p-2">Rings</div>
+          <div class="p-2">Cloaks</div>
+          <div class="p-2">Bracers</div>
+          <div class="p-2">Necks</div>
+        </div>
       </div>
-    </div>
 
-    <div class="flex-row cost-row" onclick="highlight_valor(this)">
-      <div class="d-flex justify-content-center">400</div>
-      <div class="d-flex justify-content-center">
-        <div class="p-2">Shoulders</div>
-        <div class="p-2">Gloves</div>
-        <div class="p-2">Trinkets</div>
-        <div class="p-2">Boots</div>
-        <div class="p-2">Belts</div>
+      <div class="flex-row cost-row" onclick="highlight_valor(this)">
+        <div class="d-flex justify-content-center">400</div>
+        <div class="d-flex justify-content-center">
+          <div class="p-2">Shoulders</div>
+          <div class="p-2">Gloves</div>
+          <div class="p-2">Trinkets</div>
+          <div class="p-2">Boots</div>
+          <div class="p-2">Belts</div>
+        </div>
       </div>
-    </div>
-    <div class="flex-row cost-row" onclick="highlight_valor(this)">
-      <div class="d-flex justify-content-center">475</div>
-      <div class="d-flex justify-content-center">Helms, Chests, Legs</div>
-    </div>
-    <div class="flex-row cost-row" onclick="highlight_valor(this)">
-      <div class="d-flex justify-content-center">500</div>
-      <div class="d-flex justify-content-center">1-Handed Strength/Agility Weapon</div>
-    </div>
-    <div class="flex-row cost-row" onclick="highlight_valor(this)">
-      <div class="d-flex justify-content-center">750</div>
-      <div class="d-flex justify-content-center">Main Hand Intellect Weapon</div>
-    </div>
-    <div class="flex-row cost-row" onclick="highlight_valor(this)">
-      <div class="d-flex justify-content-center">1000</div>
-      <div class="d-flex justify-content-center">2-Handed Weapon</div>
-    </div>
-    <div class="flex- pt-5">
-      <div class="d-flex justify-content-center">Add owned Valor</div>
-    </div>
-    <div class="flex-row pt-1">
-      <div class="d-flex justify-content-center"><input type="button" value="None"
-          onclick="document.getElementById('owned').value=0;recalc()">
-        <input type="number" min="0" max="99999" step="1" id="owned" onchange="recalc()" onkeyup="recalc()" />
+      <div class="flex-row cost-row" onclick="highlight_valor(this)">
+        <div class="d-flex justify-content-center">475</div>
+        <div class="d-flex justify-content-center">Helms, Chests, Legs</div>
       </div>
-    </div>
-    <div class="flex-row pt-5">
-      <div class="d-flex justify-content-center">Level</div>
-    </div>
-    <div class="flex-row pt-1">
-      <div class="d-flex justify-content-center">FROM</div>
-      <div class="d-flex justify-content-center">
-        <div class="cost-row px-3 text-center highlighted-ilvl-from" onclick="highlight_ilvl_from(this)" data-level="1">
-          <div class="flex-row">184</div>
-          <div class="flex-row smoll">M+0</div>
-        </div>
-        <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="2">
-          <div class="flex-row">184</div>
-          <div class="flex-row smoll">M+2</div>
-        </div>
-        <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="3">
-          <div class="flex-row">190</div>
-          <div class="flex-row smoll">M+3</div>
-        </div>
-        <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="4">
-          <div class="flex-row">194</div>
-          <div class="flex-row smoll">M+4/5</div>
-        </div>
-        <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="5">
-          <div class="flex-row">197</div>
-          <div class="flex-row smoll">M+6</div>
-        </div>
-        <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="6">
-          <div class="flex-row">200</div>
-          <div class="flex-row smoll">M+7/8/9</div>
-        </div>
-        <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="7">
-          <div class="flex-row">203</div>
-          <div class="flex-row smoll">M+10/11</div>
-        </div>
-        <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="8">
-          <div class="flex-row">207</div>
-          <div class="flex-row smoll">M+12/13/14</div>
-        </div>
-        <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="9">
-          <div class="flex-row">210</div>
-          <div class="flex-row smoll">M+15</div>
-        </div>
-        <div class="cost-row px-3" onclick="highlight_ilvl_from(this)" data-level="10">213</div>
-        <div class="cost-row px-3" onclick="highlight_ilvl_from(this)" data-level="11">216</div>
+      <div class="flex-row cost-row" onclick="highlight_valor(this)">
+        <div class="d-flex justify-content-center">500</div>
+        <div class="d-flex justify-content-center">1-Handed Strength/Agility Weapon</div>
+      </div>
+      <div class="flex-row cost-row" onclick="highlight_valor(this)">
+        <div class="d-flex justify-content-center">750</div>
+        <div class="d-flex justify-content-center">Main Hand Intellect Weapon</div>
+      </div>
+      <div class="flex-row cost-row" onclick="highlight_valor(this)">
+        <div class="d-flex justify-content-center">1000</div>
+        <div class="d-flex justify-content-center">2-Handed Weapon</div>
+      </div>
+      <div class="flex- pt-5">
+        <div class="d-flex justify-content-center">Add owned Valor</div>
       </div>
       <div class="flex-row pt-1">
-        <div class="d-flex justify-content-center">TO</div>
-        <div class="d-flex justify-content-center">
-          <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="2">187</div>
-          <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="3">190</div>
-          <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="4">194</div>
-          <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="5">197</div>
-          <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="6">200</div>
-          <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="7">203</div>
-          <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="8">207</div>
-          <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="9">210</div>
-          <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="10">213</div>
-          <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="11">216</div>
-          <div class="cost-row px-3 highlighted-ilvl-to" onclick="highlight_ilvl_to(this)" data-level="12">220</div>
+        <div class="d-flex justify-content-center"><input type="button" value="None"
+            onclick="document.getElementById('owned').value=0;recalc()">
+          <input type="number" min="0" max="99999" step="1" id="owned" onchange="recalc()" onkeyup="recalc()" />
         </div>
       </div>
-    </div>
-    <div class="flex-row pt-5">
-      <div class="d-flex justify-content-center">How much you need:</div>
-    </div>
-    <div class="flex-row pt-1">
-      <div class="d-flex justify-content-center" id="result"></div>
+      <div class="flex-row pt-5">
+        <div class="d-flex justify-content-center">Level</div>
+      </div>
+      <div class="flex-row pt-1">
+        <div class="d-flex justify-content-center">FROM</div>
+        <div class="d-flex justify-content-center">
+          <div class="cost-row px-3 text-center highlighted-ilvl-from" onclick="highlight_ilvl_from(this)"
+            data-level="1">
+            <div class="flex-row">184</div>
+            <div class="flex-row smoll">M+0</div>
+          </div>
+          <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="2">
+            <div class="flex-row">184</div>
+            <div class="flex-row smoll">M+2</div>
+          </div>
+          <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="3">
+            <div class="flex-row">190</div>
+            <div class="flex-row smoll">M+3</div>
+          </div>
+          <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="4">
+            <div class="flex-row">194</div>
+            <div class="flex-row smoll">M+4/5</div>
+          </div>
+          <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="5">
+            <div class="flex-row">197</div>
+            <div class="flex-row smoll">M+6</div>
+          </div>
+          <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="6">
+            <div class="flex-row">200</div>
+            <div class="flex-row smoll">M+7/8/9</div>
+          </div>
+          <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="7">
+            <div class="flex-row">203</div>
+            <div class="flex-row smoll">M+10/11</div>
+          </div>
+          <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="8">
+            <div class="flex-row">207</div>
+            <div class="flex-row smoll">M+12/13/14</div>
+          </div>
+          <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="9">
+            <div class="flex-row">210</div>
+            <div class="flex-row smoll">M+15</div>
+          </div>
+          <div class="cost-row px-3" onclick="highlight_ilvl_from(this)" data-level="10">213</div>
+          <div class="cost-row px-3" onclick="highlight_ilvl_from(this)" data-level="11">216</div>
+        </div>
+        <div class="flex-row pt-1">
+          <div class="d-flex justify-content-center">TO</div>
+          <div class="d-flex justify-content-center">
+            <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="2">187</div>
+            <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="3">190</div>
+            <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="4">194</div>
+            <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="5">197</div>
+            <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="6">200</div>
+            <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="7">203</div>
+            <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="8">207</div>
+            <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="9">210</div>
+            <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="10">213</div>
+            <div class="cost-row px-3" onclick="highlight_ilvl_to(this)" data-level="11">216</div>
+            <div class="cost-row px-3 highlighted-ilvl-to" onclick="highlight_ilvl_to(this)" data-level="12">220</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-row pt-5">
+        <div class="d-flex justify-content-center">How much you need:</div>
+      </div>
+      <div class="flex-row pt-1">
+        <div class="d-flex justify-content-center" id="result"></div>
+      </div>
     </div>
   </div>
+
   <script>
     recalc();
   </script>
