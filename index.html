@@ -3,74 +3,18 @@
 <head>
   <link rel="icon" href="valor.jpg">
   <title>Valor</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <style>
-    div.cost-row {
-      border: 1px solid white;
-      border-collapse: collapse;
-      background-color: #000000b8;
-      color: white;
-      border-radius: 1px;
-      margin: 0 2px 0 0;
-      cursor: pointer;
-    }
 
-    div.highlighted-valor-cost,
-    div.highlighted-ilvl-from,
-    div.highlighted-ilvl-to {
-      border-color: red;
-    }
-
-    .smoll {
-      font-size: 0.8em;
-    }
-
-    .outline {
-      -webkit-text-stroke-color: #ffffff;
-      -webkit-text-stroke-width: 0.5px;
-    }
   </style>
 </head>
 
 <body style="background-color: #0f063a; background-image: url(bg.png);">
-  <script>
-    const VALOR_PER_DUNGEON = 135;
-    const VALOR_PER_EPIC_CALLING = 50;
-    const VALOR_PER_RARE_CALLING = 35;
-    function highlight_valor(elem) {
-      highlight(elem, "highlighted-valor-cost")
-    }
-    function highlight_ilvl_from(elem) {
-      highlight(elem, "highlighted-ilvl-from")
-    }
-    function highlight_ilvl_to(elem) {
-      highlight(elem, "highlighted-ilvl-to")
-    }
-    function highlight(elem, klass) {
-      for (let e of document.getElementsByClassName(klass)) {
-        e.classList.remove(klass);
-      }
-      elem.classList.add(klass);
-      recalc();
-    }
-
-    function recalc() {
-      const from = document.getElementsByClassName("highlighted-ilvl-from")[0].dataset["level"];
-      const to = document.getElementsByClassName("highlighted-ilvl-to")[0].dataset["level"];
-      const cost = document.getElementsByClassName("highlighted-valor-cost")[0].children[0].textContent;
-      const owned = document.getElementById("owned").value;
-      const result = (to - from) * cost - owned;
-      document.getElementById("result").textContent = result;
-      document.getElementById("dungs").textContent = Math.ceil(result / VALOR_PER_DUNGEON);
-      document.getElementById("epic_call").textContent = Math.ceil(result / VALOR_PER_EPIC_CALLING);
-      document.getElementById("rare_call").textContent = Math.ceil(result / VALOR_PER_RARE_CALLING);
-    }
-
-  </script>
+  <script src="valor.js"></script>
   <div class="container">
     <div class="offset-md-3 col-md-6">
-      <div class="flex-row pb-5">
+      <div class="flex-row pb-3">
         <div class="d-flex justify-content-center">
           <h1 class="outline">You want to upgrade</h1>
         </div>
@@ -120,8 +64,7 @@
         </div>
       </div>
       <div class="flex-row pt-1">
-        <div class="d-flex justify-content-center"><input type="button" value="None"
-            onclick="document.getElementById('owned').value=0;recalc()">
+        <div class="d-flex justify-content-center"><input type="button" value="None" onclick="document.getElementById('owned').value=0;recalc()">
           <input type="number" min="0" max="99999" step="1" id="owned" onchange="recalc()" onkeyup="recalc()" />
         </div>
       </div>
@@ -130,8 +73,7 @@
           <h3 class="outline">FROM</h3>
         </div>
         <div class="d-flex justify-content-center">
-          <div class="cost-row px-3 text-center highlighted-ilvl-from" onclick="highlight_ilvl_from(this)"
-            data-level="1">
+          <div class="cost-row px-3 text-center highlighted-ilvl-from" onclick="highlight_ilvl_from(this)" data-level="1">
             <div class="flex-row">184</div>
             <div class="flex-row smoll">M+0</div>
           </div>
@@ -193,8 +135,7 @@
         <div class="d-flex justify-content-center">
           <h2>How much you need:</h2>
         </div>
-        <div class="d-flex justify-content-center"><span id="result" class="pr-1"></span><img src="valor.jpg" width="20"
-            height="20">
+        <div class="d-flex justify-content-center"><span id="result" class="pr-1"></span><img src="valor.jpg" width="20" height="20">
         </div>
         <div class="d-flex justify-content-center">Approx&nbsp<span id="dungs"></span>&nbspdungeons (135 each).</div>
         <div class="d-flex justify-content-center">Approx&nbsp<span id="rare_call"></span>&nbspEpic Callings (50 each).

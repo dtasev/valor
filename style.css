@@ -1,0 +1,25 @@
+div.cost-row {
+  border: 1px solid white;
+  border-collapse: collapse;
+  background-color: #000000b8;
+  color: white;
+  border-radius: 1px;
+  margin: 0 2px 0 0;
+  cursor: pointer;
+}
+
+div.highlighted-valor-cost,
+div.highlighted-ilvl-from,
+div.highlighted-ilvl-to {
+  border-color: red;
+}
+
+.smoll {
+  font-size: 0.8em;
+}
+
+.outline {
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 1px;
+  color: white;
+}
