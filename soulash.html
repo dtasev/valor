@@ -1,0 +1,94 @@
+<html>
+
+<head>
+  <link rel="icon" href="soulash.jpg">
+  <title>Anima</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
+</head>
+
+<body style="background-color: #0f063a; background-image: url(missing.png);">
+  <script src="common.js"></script>
+  <script src="soulash.js"></script>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3">
+        <div class="d-flex mt-3">
+          <a class="link" href="/">M+ Valor <img src="valor.jpg" width="20" height="20"></a>
+        </div>
+        <div class="d-flex mt-3">
+          <a class="link" href="anima.html">Campaign Items Anima <img src="anima.jpg" width="20" height="20"></a>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+        <div class="flex-row mt-5">
+          <div class="d-flex justify-content-center">
+            <h3 class="outline">Start ILVL</h3>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="cost-row px-3 text-center highlighted-ilvl-from" onclick="highlight_ilvl_from(this)" data-level="1">
+              <div class="flex-row justify-content-center">None</div>
+            </div>
+            <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="2">
+              <div class="flex-row">190</div>
+            </div>
+            <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="3">
+              <div class="flex-row">210</div>
+            </div>
+            <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="4">
+              <div class="flex-row">225</div>
+            </div>
+            <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="5">
+              <div class="flex-row">235</div>
+            </div>
+          </div>
+          <div class="flex-row pt-1">
+            <div class="d-flex justify-content-center">
+              <h3 class="outline">To</h3>
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="cost-row px-3 text-center" onclick="highlight_ilvl_to(this)" data-level="2">
+                <div class="flex-row">190</div>
+              </div>
+              <div class="cost-row px-3 text-center" onclick="highlight_ilvl_to(this)" data-level="3">
+                <div class="flex-row">210</div>
+              </div>
+              <div class="cost-row px-3 text-center" onclick="highlight_ilvl_to(this)" data-level="4">
+                <div class="flex-row">225</div>
+              </div>
+              <div class="cost-row px-3 text-center highlighted-ilvl-to" onclick="highlight_ilvl_to(this)" data-level="5">
+                <div class="flex-row">235</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-row mt-2">
+            <div class="d-flex justify-content-center">
+              <h2 class="outline">Owned Soul Ash</h2>
+            </div>
+          </div>
+          <div class="flex-row pt-1">
+            <div class="d-flex justify-content-center"><input type="button" value="None" onclick="document.getElementById('owned').value=0;recalc()">
+              <input type="number" min="0" max="99999" step="1" id="owned" onchange="recalc()" onkeyup="recalc()" />
+            </div>
+          </div>
+        </div>
+        <div class="flex-row cost-row mt-5">
+          <div class="d-flex justify-content-center">
+            <h2>How much you need:</h2>
+          </div>
+          <div class="d-flex justify-content-center"><span id="result" class="pr-1"></span><img src="soulash.jpg" width="20" height="20">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    recalc();
+  </script>
+</body>
+
+</html>
