@@ -1,5 +1,5 @@
 div.cost-row {
-  border: 1px solid white;
+  border: 2px solid #ffffff73;
   border-collapse: collapse;
   background-color: #000000b8;
   color: white;
@@ -22,4 +22,17 @@ div.highlighted-ilvl-to {
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 1px;
   color: white;
+}
+
+.link {
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 0.3px;
+  color: white;
+}
+
+.link:hover {
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 0.5px;
+  color: rgba(255, 255, 255, 0.796);
+  text-decoration: none;
 }

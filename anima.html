@@ -1,0 +1,126 @@
+<html>
+
+<head>
+  <link rel="icon" href="anima.jpg">
+  <title>Anima</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
+</head>
+
+<body style="background-color: #0f063a; background-image: url(anima_bg_d.png);">
+  <script src="common.js"></script>
+  <script src="anima.js"></script>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="d-flex mt-3">
+          <a class="link" href="/">M+ Valor <img src="valor.jpg" width="20" height="20"></a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="flex-row mt-2">
+          <div class="d-flex justify-content-center">
+            <h2 class="outline">Owned Anima</h2>
+          </div>
+        </div>
+        <div class="flex-row pt-1">
+          <div class="d-flex justify-content-center"><input type="button" value="None" onclick="document.getElementById('owned').value=0;recalc()">
+            <input type="number" min="0" max="99999" step="1" id="owned" onchange="recalc()" onkeyup="recalc()" />
+          </div>
+        </div>
+        <div class="flex-row mt-5">
+          <div class="d-flex justify-content-center">
+            <h3 class="outline">Upgrade from Level</h3>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="cost-row px-3 text-center highlighted-ilvl-from" onclick="highlight_ilvl_from(this)" data-level="1">
+              <div class="flex-row justify-content-center">1</div>
+              <div class="flex-row smoll">155</div>
+            </div>
+            <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="2">
+              <div class="flex-row">2</div>
+              <div class="flex-row smoll">164</div>
+            </div>
+            <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="3">
+              <div class="flex-row">3</div>
+              <div class="flex-row smoll">171</div>
+            </div>
+            <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="4">
+              <div class="flex-row">4</div>
+              <div class="flex-row smoll">177</div>
+            </div>
+            <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="5">
+              <div class="flex-row">5</div>
+              <div class="flex-row smoll">184</div>
+            </div>
+            <div class="cost-row px-3 text-center" onclick="highlight_ilvl_from(this)" data-level="6">
+              <div class="flex-row">6</div>
+              <div class="flex-row smoll">190</div>
+            </div>
+          </div>
+          <div class="flex-row pt-1">
+            <div class="d-flex justify-content-center">
+              <h3 class="outline">To</h3>
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="cost-row px-3 text-center" onclick="highlight_ilvl_to(this)" data-level="2">
+                <div class="flex-row">2</div>
+                <div class="flex-row smoll">164</div>
+              </div>
+              <div class="cost-row px-3 text-center" onclick="highlight_ilvl_to(this)" data-level="3">
+                <div class="flex-row">3</div>
+                <div class="flex-row smoll">171</div>
+              </div>
+              <div class="cost-row px-3 text-center" onclick="highlight_ilvl_to(this)" data-level="4">
+                <div class="flex-row">4</div>
+                <div class="flex-row smoll">177</div>
+              </div>
+              <div class="cost-row px-3 text-center" onclick="highlight_ilvl_to(this)" data-level="5">
+                <div class="flex-row">5</div>
+                <div class="flex-row smoll">184</div>
+              </div>
+              <div class="cost-row px-3 text-center" onclick="highlight_ilvl_to(this)" data-level="6">
+                <div class="flex-row">6</div>
+                <div class="flex-row smoll">190</div>
+              </div>
+              <div class="cost-row px-3 text-center highlighted-ilvl-to" onclick="highlight_ilvl_to(this)" data-level="7">
+                <div class="flex-row">7</div>
+                <div class="flex-row smoll">197</div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="flex-row pt-3">
+          <div class="d-flex justify-content-center">
+            <h3 class="outline">Number of items</h3>
+          </div>
+        </div>
+        <div class="flex-row pt-1">
+          <div class="d-flex justify-content-center">
+            <h4 class="outline">1</h4>
+            <input type="range" min="1" max="8" step="1" id="num_items" value="1" onchange="recalc()" onmousemove="recalc()"></input>
+            <h4 class="outline">8</h4>
+          </div>
+        </div> -->
+
+        </div>
+        <div class="flex-row cost-row mt-5">
+          <div class="d-flex justify-content-center">
+            <h2>How much you need:</h2>
+          </div>
+          <div class="d-flex justify-content-center"><span id="result" class="pr-1"></span><img src="anima.jpg" width="20" height="20">
+          </div>
+        </div>
+        <div class="flex-row cost-row mt-5 d-flex justify-content-center smoll">Tip: To upgrade all items from the campaign you need 4550&nbsp;<img src="anima.jpg" width="20" height="20">.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    recalc();
+  </script>
+</body>
+
+</html>
