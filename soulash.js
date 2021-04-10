@@ -16,4 +16,18 @@ function recalc() {
   const owned = document.getElementById("owned").value;
   const result = (sum - owned); // * num_items;
   document.getElementById("result").textContent = result;
+
+  if (owned !== 0) {
+    for (const elem of document.getElementsByClassName("highlighted-soulash")) {
+      elem.classList.remove("highlighted-soulash");
+    }
+
+    const table = document.getElementById("soulash-table");
+    for (const row of table.rows) {
+      if (result <= parseInt(row.cells[3].textContent)) {
+        row.classList.add("highlighted-soulash");
+        break;
+      }
+    }
+  }
 }

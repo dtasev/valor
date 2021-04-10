@@ -1,7 +1,8 @@
 div.cost-row {
   border: 2px solid #ffffff73;
   border-collapse: collapse;
-  background-color: #000000b8;
+  background-color: #000000;
+  /* background-color: #000000b8; */
   color: white;
   border-radius: 1px;
   margin: 0 2px 0 0;
@@ -12,6 +13,9 @@ div.highlighted-valor-cost,
 div.highlighted-ilvl-from,
 div.highlighted-ilvl-to {
   border-color: red;
+}
+tr.highlighted-soulash{
+  background-color: #00ffff59;
 }
 
 .smoll {
