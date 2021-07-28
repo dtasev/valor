@@ -16,6 +16,10 @@ function recalc() {
   const owned = document.getElementById("owned").value;
   const result = (sum - owned); // * num_items;
   document.getElementById("result").textContent = result;
+  const num_packaged_soul_ash = Math.ceil(result / 250);
+  document.getElementById("result-packaged-soul-ash").textContent = num_packaged_soul_ash;
+  document.getElementById("result-packaged-soul-ash-cost").textContent = num_packaged_soul_ash * 300;
+
 
   if (owned !== 0) {
     for (const elem of document.getElementsByClassName("highlighted-soulash")) {
