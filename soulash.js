@@ -24,7 +24,7 @@ function recalc() {
 
     const table = document.getElementById("soulash-table");
     for (const row of table.rows) {
-      if (result <= parseInt(row.cells[3].textContent)) {
+      if (result <= parseInt(row.cells[2].textContent)) {
         row.classList.add("highlighted-soulash");
         break;
       }
